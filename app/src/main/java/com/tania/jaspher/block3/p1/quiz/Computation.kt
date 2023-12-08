@@ -25,7 +25,7 @@ class Computation : AppCompatActivity() {
         if(weight.isNotEmpty() && height.isNotEmpty()) {
             val weightValue = weight.toFloat()
             val heightValue = height.toFloat() / 100
-            val bmi = weightValue / (heightValue * weightValue)
+            val bmi = weightValue / (heightValue * heightValue)
 
             val result = when {
                 bmi < 18.5 -> "You are Underweight"
