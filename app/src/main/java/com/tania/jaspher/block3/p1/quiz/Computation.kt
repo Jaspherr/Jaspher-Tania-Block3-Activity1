@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.content.Intent
 
 class Computation : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +36,12 @@ class Computation : AppCompatActivity() {
 
             }
 
-            resultTextView.text = "BMI: ${String.format("%.2f", bmi)}\nCategory: $result"
+            val formattedResult = "BMI: ${String.format("%.2f", bmi)}\nCategory: $result"
+
+            val intent = Intent(this, ResultActivity::class.java)
+            intent.putExtra("bmiResult", formattedResult)
+            startActivity(intent)
+
         } else {
             resultTextView.text = "Enter a valid height and weight."
         }

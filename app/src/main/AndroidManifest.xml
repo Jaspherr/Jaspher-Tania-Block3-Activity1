@@ -13,6 +13,9 @@
         android:theme="@style/Theme.JaspherTaniaBlock3Quiz"
         tools:targetApi="31">
         <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
+        <activity
             android:name=".Computation"
             android:exported="false" />
         <activity
