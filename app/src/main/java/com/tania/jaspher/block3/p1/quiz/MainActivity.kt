@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         val startButton: Button = findViewById(R.id.bt_start)
         startButton.setOnClickListener {startComputationActivity()}
 
-        //Exit button
         val exitButton: Button = findViewById(R.id.bt_exit)
         exitButton.setOnClickListener { exitApp(it) }
 
@@ -30,5 +29,4 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, Computation:: class.java)
         startActivity(intent)
     }
-
 }
